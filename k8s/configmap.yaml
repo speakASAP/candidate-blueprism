@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: candidate-blueprism-config
+  namespace: statex-apps
+  labels:
+    app: candidate-blueprism
+    managed-by: k8s-migration
+data:
+  SERVICE_NAME: "candidate-blueprism"
+  DOMAIN: "candidate-blueprism.alfares.cz"

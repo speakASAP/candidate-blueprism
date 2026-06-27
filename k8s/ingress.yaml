@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: candidate-blueprism
+  namespace: statex-apps
+  labels:
+    app: candidate-blueprism
+    managed-by: k8s-migration
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - candidate-blueprism.alfares.cz
+      secretName: candidate-blueprism-tls
+  rules:
+    - host: candidate-blueprism.alfares.cz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: candidate-blueprism
+                port:
+                  number: 4850

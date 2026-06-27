@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Flow Assessment</title>
+    <link rel="stylesheet" href="./styles.css?v=20260609-3" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 4v6M8 24v-5h16v5M16 10v5M6 24h6v4H6zM13 15h6v4h-6zM22 24h6v4h-6z" />
+          </svg>
+          <div>
+            <h1>Process Flow Assessment</h1>
+            <p>Junior Automation Developer candidate exercise</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="resetBtn" type="button">
+            <span aria-hidden="true">↻</span>
+            Clear
+          </button>
+          <button class="primary-button" id="exportBtn" type="button">
+            <span aria-hidden="true">↓</span>
+            Export
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="palette-panel" aria-label="Shape palette">
+          <div class="panel-heading">
+            <h2>Shapes</h2>
+            <p>Drag a shape onto the canvas</p>
+          </div>
+          <div class="shape-list" id="shapeList"></div>
+          <div class="tip-box">
+            <strong>Tip</strong>
+            <span>Connect shapes by dragging from a small teal handle to another shape.</span>
+          </div>
+        </aside>
+
+        <section class="canvas-region" aria-label="Flowchart editor">
+          <div class="canvas-toolbar">
+            <button class="icon-button" id="undoBtn" type="button" title="Undo">↶</button>
+            <button class="icon-button" id="redoBtn" type="button" title="Redo">↷</button>
+            <span class="toolbar-divider"></span>
+            <button class="icon-button" id="zoomOutBtn" type="button" title="Zoom out">−</button>
+            <span class="zoom-readout" id="zoomReadout">100%</span>
+            <button class="icon-button" id="zoomInBtn" type="button" title="Zoom in">+</button>
+            <span class="toolbar-divider"></span>
+            <button class="text-button" id="editTextBtn" type="button">Edit text</button>
+            <button class="text-button" id="clearSelectionBtn" type="button">Clear selection</button>
+          </div>
+
+          <div class="canvas-wrap" id="canvasWrap">
+            <div class="canvas" id="canvas">
+              <svg class="connections-layer" id="connectionsLayer" aria-hidden="true"></svg>
+              <div class="nodes-layer" id="nodesLayer"></div>
+            </div>
+          </div>
+
+          <div class="statusbar">
+            <span id="objectCount">Objects: 0</span>
+            <span id="connectionCount">Connections: 0</span>
+            <span class="status-hint" id="statusHint">Ready</span>
+          </div>
+        </section>
+
+        <aside class="brief-panel" aria-label="Assessment brief">
+          <section class="brief-section">
+            <h2>Assessment Brief</h2>
+            <h3>Coffee for Colleagues Process</h3>
+            <p>
+              Design a process flow for preparing and delivering coffee for colleagues in the office.
+            </p>
+          </section>
+
+          <section class="brief-section">
+            <h2>Your Tasks</h2>
+            <ol class="task-list">
+              <li><strong>Draw the process flow</strong><span>Create a clear end-to-end process using the provided notation.</span></li>
+              <li><strong>Describe open points</strong><span>Capture assumptions, missing information, and decisions needed.</span></li>
+              <li><strong>Optimize the process</strong><span>Suggest improvements for efficiency and reliability.</span></li>
+            </ol>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <template id="nodeTemplate">
+      <div class="flow-node" tabindex="0">
+        <div class="node-shape">
+          <span class="node-label" contenteditable="true" spellcheck="false"></span>
+        </div>
+        <button class="edit-node" type="button" title="Edit text">✎</button>
+        <button class="delete-node" type="button" title="Delete shape">×</button>
+        <button class="connector-handle top" type="button" title="Connect from top"></button>
+        <button class="connector-handle right" type="button" title="Connect from right"></button>
+        <button class="connector-handle bottom" type="button" title="Connect from bottom"></button>
+        <button class="connector-handle left" type="button" title="Connect from left"></button>
+      </div>
+    </template>
+
+    <script src="./app.js?v=20260609-3"></script>
+  </body>
+</html>
