@@ -1,3 +1,28 @@
+function consumeAuthCallback() {
+  if (window.location.pathname !== "/auth/callback") return;
+
+  const fragment = new URLSearchParams(window.location.hash.slice(1));
+  const accessToken = fragment.get("access_token");
+  const refreshToken = fragment.get("refresh_token");
+  const expiresAt = fragment.get("expires_at");
+  const authMethod = fragment.get("auth_method");
+
+  if (!accessToken) {
+    window.history.replaceState(null, "", "/");
+    return;
+  }
+
+  localStorage.setItem("candidate_blueprism_access_token", accessToken);
+  if (refreshToken) localStorage.setItem("candidate_blueprism_refresh_token", refreshToken);
+  if (expiresAt) localStorage.setItem("candidate_blueprism_token_expires_at", expiresAt);
+  if (authMethod) localStorage.setItem("candidate_blueprism_auth_method", authMethod);
+  localStorage.setItem("candidate_blueprism_authenticated_at", new Date().toISOString());
+
+  window.history.replaceState(null, "", "/");
+}
+
+consumeAuthCallback();
+
 const shapeTypes = [
   { type: "process", label: "Process Step", defaultText: "Process step" },
   { type: "decision", label: "Decision Point", defaultText: "Decision?" },
