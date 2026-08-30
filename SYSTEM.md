@@ -27,6 +27,38 @@ Candidate Blueprism is a static single-page web application served by `nginx:alp
 
 ## Known gaps
 
-- [MISSING: repository-backed validation script for static UI contract]
-- [MISSING: documented export file format contract]
-- [MISSING: explicit source-control remote/origin metadata inside project folder]
+- No repository-defined repository-backed validation script for static UI contract
+- No repository-defined documented export file format contract
+- No repository-defined explicit source-control remote/origin metadata inside project folder
+
+## Purpose
+A static browser-based flowchart editor for the Coffee for Colleagues candidate exercise.
+
+## Responsibilities
+Provide the behavior and runtime described by the tracked project documentation.
+
+## Non-Responsibilities
+Do not add integrations, persistence, or product scope not declared by repository sources.
+
+## Inputs
+Inputs are the browser, runtime, and configuration inputs described in existing project sources.
+
+## Outputs
+Outputs are the user-visible or operational results described in existing project sources.
+
+## Dependencies
+Static nginx application at candidate-blueprism.alfares.cz with Kubernetes probe path /.
+
+## Upstream Traceability
+The approved business baseline and vision define this system’s intent.
+
+## Downstream Artifacts
+The integration contract and bootstrap chain record planning evidence.
+
+## Validation Criteria
+Run the IPS planning validator and applicable existing project checks.
+
+## Open Questions
+No new open question is asserted by this documentation-only adoption.
+Status: reviewed
+completeness_level: complete
