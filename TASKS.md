@@ -5,6 +5,7 @@
 - None. No repo-defined implementation backlog is currently open.
 
 ## Active
+
 - None.
 
 ## Completed
@@ -26,11 +27,14 @@ Future work must start from an owner-added task for one of:
 - accessibility/UX improvements;
 - deployment/runtime requirements.
 
-## ActiveNo active IPS adoption implementation task remains after this documentation alignment.
+## Active
+No active IPS adoption implementation task remains after this documentation alignment.
 
-## Ready NextFuture owner-approved work requires a new linked task.
+## Ready Next
+Future owner-approved work requires a new linked task.
 
-## BlockedNo adoption blocker is recorded.
+## Blocked
+No adoption blocker is recorded.
 
 ## Completed
 TASK-001 completed the IPS adoption profile.
