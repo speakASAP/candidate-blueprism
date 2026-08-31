@@ -26,11 +26,17 @@ Future work must start from an owner-added task for one of:
 - accessibility/UX improvements;
 - deployment/runtime requirements.
 
-## ActiveNo active IPS adoption implementation task remains after this documentation alignment.
+## Active
 
-## Ready NextFuture owner-approved work requires a new linked task.
+No active IPS adoption implementation task remains after this documentation alignment.
 
-## BlockedNo adoption blocker is recorded.
+## Ready Next
+
+Future owner-approved work requires a new linked task.
+
+## Blocked
+
+No adoption blocker is recorded.
 
 ## Completed
 TASK-001 completed the IPS adoption profile.
