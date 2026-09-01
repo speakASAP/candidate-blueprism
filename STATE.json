@@ -1,18 +1,4 @@
 {
-  "schemaVersion": 1,
-  "project": "candidate-blueprism",
-  "lifecycle": "documented",
-  "health": "documented-runtime",
-  "activeTask": "No active IPS adoption task.",
-  "lastUpdated": "2026-08-30",
-  "deployment": {
-    "status": "repository-defined",
-    "target": "Static nginx application at candidate-blueprism.alfares.cz with Kubernetes probe path /."
-  },
-  "blockers": [],
-  "followUps": [
-    "Owner-approved work must begin with a linked IPS task."
-  ],
   "schema_version": "1.0",
   "repository": "candidate-blueprism",
   "service": {
